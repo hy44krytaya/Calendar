@@ -1,0 +1,85 @@
+*{
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+}
+body{
+	background:red;
+	color: black;
+	text-align: center;
+	display:flex;
+	justify-content: center; 
+}
+.container{
+	background: white;
+	padding: 20px;
+	border-radius: 15px;
+	width: 100%
+	max-width:600px;
+
+}
+header{
+	margin-bottom: 30px
+}
+.title{
+	color: red;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+.calendar{
+	background-color: white;
+	padding: 15px;
+	border-radius: 15px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.days-of-week{
+	display: inline-grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 10px;
+	margin-bottom: 10px;
+}
+.day{
+	font-weight: bold;
+	font-size: 1.1rem;
+	color:red ;
+}
+.days{
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 10px;
+}
+.days-numbers{
+	font-size: 1.2rem;
+	padding: 20px;
+	background-color: #FFE4B5;
+	border-radius: 50%;
+	cursor: pointer;
+
+}
+.days-numbers:hover{
+	background-color: #F0E68C	;
+	transform: scale(1.1);
+
+}
+.days-numbers:active{
+	background-color: #E6E6FA;
+	color: white;
+}
+.days-numbers:nth-child(3){
+	background-color:#F0E68C
+	font-weidth: bold;
+}
+.tooltip{
+	display: none;
+	position: absolute;
+	background-color: #DEB887;
+	border-radius: 7px;
+	padding: 15px;
+	box-shadow: 0 0 10px rgaba(0, 0, 0, 0.5);
+	transform: translateY(-150%);
+	z-index: 10;
+}
+.days-numbers:hover +.tooltip{
+	display: block;
+}
